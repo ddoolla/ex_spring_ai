@@ -1,4 +1,4 @@
-package com.example.exspringai;
+package com.example.exspringai.advisor;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;

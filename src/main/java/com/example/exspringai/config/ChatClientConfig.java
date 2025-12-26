@@ -1,4 +1,4 @@
-package com.example.exspringai;
+package com.example.exspringai.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatModel;
