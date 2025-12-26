@@ -1,4 +1,4 @@
-package com.example.exspringai;
+package com.example.exspringai.chatclient;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,9 @@ public class MyController {
 
     private final ChatClient chatClient;
 
+    /**
+     * spring boot 는 ChatClient.Builder 에 주입할 프로토타입 빈 생성 (의존성 + 외부 설정 파일)
+     */
     public MyController(ChatClient.Builder builder) {
         this.chatClient = builder
                 .defaultSystem("answer in {language}") // 시스템 기본 텍스트 설정
@@ -65,6 +68,7 @@ public class MyController {
     }
 
     /**
+     * 메타데이터 설정
      * user.text: 사용자 요청 텍스트.
      * system.text: 사용자에게 보이지 않는 배경 설정.
      * metadata: 사용자, 시스템 메타데이터 제공. ex) 어떤 사용자가 이 요청을 보냈는지? (defaultSystem 에서도 지원)
