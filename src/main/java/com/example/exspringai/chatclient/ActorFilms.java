@@ -1,4 +1,4 @@
-package com.example.exspringai;
+package com.example.exspringai.chatclient;
 
 import java.util.List;
 
