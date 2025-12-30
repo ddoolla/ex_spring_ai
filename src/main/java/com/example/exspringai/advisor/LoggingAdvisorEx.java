@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequiredArgsConstructor
-public class LoggingEx {
+public class LoggingAdvisorEx {
 
     private final ChatClient chatClient;
 
