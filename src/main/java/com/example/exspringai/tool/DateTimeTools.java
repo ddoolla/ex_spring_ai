@@ -34,10 +34,12 @@ public class DateTimeTools {
     *   - 도구에 대한 주요 정보 제공
     *   name - 도구 이름, 안쓰면 메서드 이름 사용 (같은 클래스 내 중복 X)
     *   description - 도구에 대한 설명, 안쓰면 메서드 이름 사용 (모델이 도구의 목적과 사용법을 이해하려면 자세히 적어주는게 좋음)
-    *   returnDirect - 클라이언트로 직접 반환 or 모델로 다시 전달 여부
+    *   returnDirect - 도구 호출 결과를 클라이언트로 직접 반환 or 모델로 다시 전달 여부
     *   resultConverter - 툴 호출 결과를 AI 모델로 다시 전송할 문자열 객체로 변환하는데 사용할 ToolCallResultConverter 구현체 지정
     *       기본적으로 Jackson을 사용하여 JSON 으로 직렬화된다. 사용자 지정이 필요할 경우 재정의하여 사용.
-    *       프로그래밍 방법을 사용할 경우 MethodToolCallback.Builder.resultConverter()를 사용하면 된다.
+    *       프로그래밍 방식을 사용할 경우 MethodToolCallback.Builder.resultConverter()를 사용하면 된다.
+    *       함수 도구는 FunctionToolCallback.Builder.resultConverter() 사용.
+    *
     *
     *   접근 제어자 자유롭게 사용 가능 (public, protected, package-private (default), private)
     * */
